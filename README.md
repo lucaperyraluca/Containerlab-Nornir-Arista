@@ -2,30 +2,30 @@
 
 Este proyecto combina el uso de **Containerlab** y **Nornir** para implementar y automatizar un laboratorio de redes con **OSPF** utilizando dispositivos Arista.
 
-### Directorio del proyecto
+## Directorio del proyecto
 
+```plaintext
+.
 ├── Containerlab
-│   └── Arista-OSPF
-│       ├── arista-ospf.clab.yml
-│       └── configs
-│           ├── r1
-│           │   └── startup-config
-│           ├── r2
-│           │   └── startup-config
-│           ├── r3
-│           │   └── startup-config
-│           └── r4
-│               └── startup-config
+│   └── Arista-OSPF
+│       ├── arista-ospf.clab.yml
+│       └── configs
+│           ├── r1
+│           │   └── startup-config
+│           ├── r2
+│           │   └── startup-config
+│           ├── r3
+│           │   └── startup-config
+│           └── r4
+│               └── startup-config
 ├── LICENSE
 ├── Nornir
-│   ├── config.yaml
-│   ├── groups.yaml
-│   ├── hosts.yaml
-│   ├── Nornir1.py
-│   └── Nornir2.py
+│   ├── config.yaml
+│   ├── groups.yaml
+│   ├── hosts.yaml
+│   ├── Nornir1.py
+│   └── Nornir2.py
 └── README.md
-
-8 directories, 12 files
 
 
 
