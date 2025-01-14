@@ -1,9 +1,9 @@
 # Containerlab-Nornir-Arista
 
-This project combine **Containerlab** and **Nornir** to implement and automate an **OSPF** lab using Arista Devices. At same time, it have the possibility to use Nornir to check information (show commands) or modify the configuration. The combination of these tools are very powerful, with just two commands you can deploy all the lab and get all the OSPF information. Also, you can modify in "Script2.py" the commands that you want to use.
-Notice that the Arista devices actually have a startup config, and is modificable inside  Containerlab/Arista-OSPF/r*/startup-config. Its mandatory mantain the ssh configurations for allow the Nornir connections. 
+This project combines **Containerlab** and **Nornir** to implement and automate an **OSPF** lab using Arista Devices. It also allows using Nornir to retrieve information (e.g., show commands) or modify the configuration. The combination of these tools is very powerful: with just two commands, you can deploy the entire lab and gather OSPF information.
+You can modify the commands used in Nornir2.py to customize the output you want. Note that the Arista devices come with predefined startup configurations, which can be edited inside the Containerlab/Arista-OSPF/r*/startup-config files. It is mandatory to maintain the SSH configurations in these files to allow Nornir to connect to the devices.. 
 
-## Proyect directory
+## Project directory
 
 ```plaintext
 .
@@ -32,9 +32,10 @@ Notice that the Arista devices actually have a startup config, and is modificabl
 
 ## Features
 
-- Configuración automatizada de dispositivos de red con **Nornir**.
-- Laboratorio simulado utilizando **Containerlab** para ejecutar dispositivos Arista.
-- Configuración inicial de OSPF en múltiples routers.
+- Automated configuration of network devices using Nornir.
+- Simulated lab using Containerlab to deploy Arista devices.
+- Initial OSPF configuration across multiple routers.
+- Customizable commands for information retrieval and configuration changes.
 
 ## Requirements
 
@@ -45,8 +46,7 @@ Notice that the Arista devices actually have a startup config, and is modificabl
   - `nornir`
   - `nornir_scrapli`
   - `scrapli`
-  - An image of Arista downloaded from it page: Arista requires its users to register with arista.com before downloading any images. Once you created an account and logged in,
-    go to the software downloads section and download ceos64 tar archive for a given release.
+  - Arista requires its users to register with arista.com before downloading any images. Once you created an account and logged in, go to the software downloads section and download ceos64 tar archive for a given release.
     Once downloaded, import the archive with docker:
     **import container image and save it under ceos:4.32.0F name**
         docker import cEOS64-lab-4.32.0F.tar.xz ceos:4.32.0F
@@ -63,9 +63,8 @@ Notice that the Arista devices actually have a startup config, and is modificabl
    Execute the file arista-ospf.clab.yml with Containerlab:
    containerlab deploy -t Containerlab/Arista-OSPF/arista-ospf.clab.yml
 
-3. **Execute Nornir to check devices:**
+3. **Configure and execute Nornir to check devices:**
 
-   You need to modify the file "hosts.yaml" and replace the IP for the correct ones. The IP od each device were assigned by Containerlab automatically, and are showed after execute 
-   "containerlab deploy -t Containerlab/Arista-OSPF/arista-ospf.clab.yml".
-   After modify these parameters (ips), ypu can modify the command or commands to check information. As default, is charged on "Nornir2.py" the follow commands:
-   commands = ["show ip ospf nei", "show ip ospf interface brief", "show ip route"] but can be replaced for wherever you want.
+   You need to update the file hosts.yaml and replace the IPs with the correct ones. The IPs for each device are assigned automatically by Containerlab and are displayed after running the following command: "containerlab deploy -t Containerlab/Arista-OSPF/arista-ospf.clab.yml".
+   Once you have updated these parameters (IPs), you can modify the commands used to retrieve information. By default, the following commands are configured in Nornir2.py:
+   commands = ["show ip ospf nei", "show ip ospf interface brief", "show ip route"] You can replace these commands with any others as needed.
