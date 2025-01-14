@@ -8,25 +8,30 @@ You can modify the commands used in Nornir2.py to customize the output you want.
 ```plaintext
 .
 ├── Containerlab
-│   └── Arista-OSPF
-│       ├── arista-ospf.clab.yml
-│       └── configs
-│           ├── r1
-│           │   └── startup-config
-│           ├── r2
-│           │   └── startup-config
-│           ├── r3
-│           │   └── startup-config
-│           └── r4
-│               └── startup-config
+│   └── Arista-OSPF
+│       ├── arista-ospf.clab.yml
+│       └── configs
+│           ├── r1
+│           │   └── startup-config
+│           ├── r2
+│           │   └── startup-config
+│           ├── r3
+│           │   └── startup-config
+│           └── r4
+│               └── startup-config
+├── images
+│   ├── Conteinerlabs-Nornir-Scarpli.png
+│   └── Topology.png
 ├── LICENSE
 ├── Nornir
-│   ├── config.yaml
-│   ├── groups.yaml
-│   ├── hosts.yaml
-│   ├── Nornir1.py
-│   └── Nornir2.py
+│   ├── config.yaml
+│   ├── groups.yaml
+│   ├── hosts.yaml
+│   ├── Nornir1.py
+│   └── Nornir2.py
 └── README.md
+
+
 
 ```
 ## Topology
