@@ -29,6 +29,9 @@ You can modify the commands used in Nornir2.py to customize the output you want.
 └── README.md
 
 ```
+## Topology
+
+![Topology Deployment](images/Topology.png)
 
 ## Features
 
@@ -68,3 +71,9 @@ You can modify the commands used in Nornir2.py to customize the output you want.
    You need to update the file hosts.yaml and replace the IPs with the correct ones. The IPs for each device are assigned automatically by Containerlab and are displayed after running the following command: "containerlab deploy -t Containerlab/Arista-OSPF/arista-ospf.clab.yml".
    Once you have updated these parameters (IPs), you can modify the commands used to retrieve information. By default, the following commands are configured in Nornir2.py:
    commands = ["show ip ospf nei", "show ip ospf interface brief", "show ip route"] You can replace these commands with any others as needed.
+
+
+## Example
+
+![Topology Deployment](images/Conteinerlabs-Nornir-Scarpli.png)
+
