@@ -1,0 +1,490 @@
+2025-01-10 15:58:33,636 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 5 hosts
+2025-01-10 15:58:33,973 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-r3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 15:58:33,974 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-r1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 15:58:33,975 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-sw': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 15:58:34,135 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-r4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 15:58:34,334 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-r2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 16:03:18,660 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 5 hosts
+2025-01-10 16:03:18,936 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-r1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 16:03:19,034 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-r4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 16:03:19,155 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-sw': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 16:03:19,249 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-r2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 16:03:19,357 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-r3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 16:35:38,826 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 5 hosts
+2025-01-10 16:35:39,111 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-r3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 16:35:39,208 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-r2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 16:35:39,326 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-r4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 16:35:39,426 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-sw': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 16:35:39,549 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-r1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 297, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 481, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2025-01-10 16:39:14,514 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 5 hosts
+2025-01-10 16:39:14,869 - nornir.core.task -    ERROR -      start() - Host 'clab-arista-ospf-lab-sw': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/lks/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 106, in open
+    connection.open()
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 106, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 224, in decorate
+    return _multiprocessing_timeout(
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 115, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/lks/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 309, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2025-01-10 16:39:54,388 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 4 hosts
+2025-01-10 16:58:32,087 -  nornir.core -     INFO -        run() - Running task 'send_commands' with args {'commands': ['show ip osf nei', 'show ip ospf interface brief', 'show ip route']} on 4 hosts
+2025-01-10 16:59:09,784 -  nornir.core -     INFO -        run() - Running task 'send_commands' with args {'commands': ['show ip osf nei', 'show ip ospf interface brief', 'show ip route']} on 4 hosts
+2025-01-10 16:59:31,587 -  nornir.core -     INFO -        run() - Running task 'send_commands' with args {'commands': ['show ip ospf nei', 'show ip ospf interface brief', 'show ip route']} on 4 hosts
+2025-01-10 17:00:57,250 -  nornir.core -     INFO -        run() - Running task 'send_commands' with args {'commands': ['show ip ospf nei', 'show ip ospf interface brief', 'show ip route']} on 4 hosts
+2025-01-11 16:06:50,778 -  nornir.core -     INFO -        run() - Running task 'send_commands' with args {'commands': ['show ip ospf nei', 'show ip ospf interface brief', 'show ip route']} on 4 hosts
+2025-01-11 16:08:11,533 -  nornir.core -     INFO -        run() - Running task 'send_commands' with args {'commands': ['show ip ospf nei', 'show ip ospf interface brief', 'show ip route']} on 4 hosts
+2025-01-11 16:12:30,120 -  nornir.core -     INFO -        run() - Running task 'send_commands' with args {'commands': ['show ip ospf nei', 'show ip ospf interface brief', 'show ip route']} on 4 hosts

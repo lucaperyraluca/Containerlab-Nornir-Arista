@@ -1,0 +1,9 @@
+---
+arista_ceos:
+  platform: eos
+  username: admin
+  password: admin
+  connection_options:
+    scrapli:
+      extras:
+        auth_strict_key: false

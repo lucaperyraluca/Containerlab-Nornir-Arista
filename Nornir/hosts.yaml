@@ -1,0 +1,26 @@
+---
+clab-arista-ospf-lab-r1:
+  hostname: 172.20.20.4
+  groups:
+    - arista_ceos
+
+
+clab-arista-ospf-lab-r2:
+  hostname: 172.20.20.6
+  groups:
+    - arista_ceos
+
+
+clab-arista-ospf-lab-r3:
+  hostname: 172.20.20.3
+  groups:
+    - arista_ceos
+
+
+clab-arista-ospf-lab-r4:
+  hostname: 172.20.20.5
+  groups:
+    - arista_ceos
+
+
+
