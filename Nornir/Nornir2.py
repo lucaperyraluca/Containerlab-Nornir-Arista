@@ -60,16 +60,13 @@ def send_commands(
 
 
 def main():
-    # Inicializa Nornir
+
     nr = InitNornir(config_file="config.yaml")
     
-    # Define los comandos a ejecutar
     commands = ["show ip ospf nei", "show ip ospf interface brief", "show ip route"]
     
-    # Ejecuta la tarea con send_commands
     results = nr.run(task=send_commands, commands=commands)
     
-    # Imprime los resultados
     print_result(results)
 
 if __name__ == "__main__":
