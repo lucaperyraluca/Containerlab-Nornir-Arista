@@ -30,11 +30,13 @@ Este proyecto combina el uso de **Containerlab** y **Nornir** para implementar y
 
 
 ## Características
+
 - Configuración automatizada de dispositivos de red con **Nornir**.
 - Laboratorio simulado utilizando **Containerlab** para ejecutar dispositivos Arista.
 - Configuración inicial de OSPF en múltiples routers.
 
 ## Requisitos
+
 - [Docker](https://docs.docker.com/get-docker/)
 - [Containerlab](https://containerlab.dev/)
 - [Python 3.8+](https://www.python.org/)
@@ -44,11 +46,14 @@ Este proyecto combina el uso de **Containerlab** y **Nornir** para implementar y
   - `scrapli`
 
 ## Instalación
+
 1. **Clona el repositorio:**
+
    git clone https://github.com/lucaperyraluca/Containerlab-Nornir-Arista.git
    cd Containerlab-Nornir-Arista
 
 2. **Configura el entorno de red:**
+
    Ejecuta el archivo arista-ospf.clab.yml con Containerlab:
    containerlab deploy -t Containerlab/Arista-OSPF/arista-ospf.clab.yml
    
